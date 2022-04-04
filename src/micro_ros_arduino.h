@@ -32,6 +32,13 @@ static inline void set_microros_transports(){
 	);
 }
 
+#if defined(TARGET_RASPBERY_PI_PICO)
+
+#include <Arduino.h>
+#include <uxr/client/transport.h>
+#include <rmw_microros/rmw_microros.h>
+#endif
+
 #if defined(TARGET_STM32F4)
 
 #include <Arduino.h>
